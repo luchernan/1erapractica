@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--ASI SE COMENTA-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso HTML5-CSS3</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container shadow">
+        <header>
+            <div class="row align-items-center">
+                <div class="col-3"><img src="img/logoiesfseif.png" alt="logo" width="250"></div>
+                <div class="col-9">
+                    <span id="btnmenu" onclick="opendrawer()">&#9776;</span>
+                    <nav id="menu">
+                        <ul class="text-right">
+                            <li>
+                                <a href="index.html">
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a href="parrafos.html">
+                                    Párrafos
+                                </a>
+                            </li>
+                            <li>
+                                <a href="enlaces.html">
+                                    Enlaces
+                                </a>
+                            </li>
+                            <li>
+                                <a href="listas.html">
+                                    Listas
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tablas.html">
+                                    Tablas
+                                </a>
+                            </li>
+                            <li>
+                                <a href="formularios.html">
+                                    Formularios
+                                </a>
+                            </li>
+                            <li>
+                                <a href="multimedia.html">
+                                    Multimedia
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+
+        </header>
+        <main class="shadow">
+            <div class="px-3">
+                <h1 class="text-center bg-azul-o">Formularios</h1>
+            </div>
+            <div class="px-3">
+                <hr>
+            </div>
+            <div class="p-3">
+                <div id="home" class="py-3">
+                    <h2 class="text-center">Tipos de Formularios</h2>
+                    
+                </div>
+                <form action="kk.php" method="get" class="form-login"> <!--Pagina a donde lo manda "kk.php"--><!--"get" para que no se vea en la url-->
+                    <h3>Formulario de Login</h3>
+                    <fieldset><!--campo para rellenar-->
+                        <legend><!--leyenda-->
+                            Login
+                        </legend>
+                        <p>Nombre: <input type="text" name="nombre" id=""></p><!--"type" es tipo de dato introducido--><!--"Name" nombre con el que llega a kk.php-->
+                        <p>Contraseña: <input type="password" name="clave" id=""></p>
+                        <p><input type="submit" value="Login" class="btn btn-blue"></p>
+                    </fieldset>
+
+                </form>
+                <form action="kk.php" method="get" class="form-registro">
+                    <h3>Formulario registro</h3>
+                    <fieldset>
+                        <legend>
+                            Registro
+                        </legend>
+                        <p><label for="">input type text</label>
+                            <input type="text" name="nombre" id="" placeholder="Name">
+                        </p>
+                        <p><label for="">input type password</label><!--"label" es etiqueta-->
+                            <input type="password" name="clave" id="" placeholder="Password"><!--"placeholder" es la ayuda dentro del campo-->
+                        </p>
+                        <p>Fecha Nacimiento: (Lista simple -> tag select)
+                            <select name="dia" id=""> <!--"select" seleccionar de una lista desplegable-->
+                                <option value="1">1</option>
+                                <option value="1">2</option>
+                                <option value="3">3</option>
+                            </select>
+                            <select name="mes" id="">
+                                <option value="1">Enero</option>
+                                <option value="2">Febrero</option>
+                                <option value="3">Marzo</option>
+                                <option value="4">Abril</option>
+                            </select>
+                            <select name="anio" id="">
+                                <option value="2001">2001</option>
+                                <option value="2002">2002</option>
+                            </select>
+                        <p>Comentarios (tag textarea):<br><textarea name="comentarios" id="" cols="20" rows="2"></textarea></p><!--"textarea" es un cuadrado de texto donde cols son columnas y rows filas-->
+                        <p>Aficiones: (tag input type checkbox)<br>
+                            <input type="checkbox" name="cine" id=""> Cine <br> <!--"checkbox" es para marcar varias opciones-->
+                            <input type="checkbox" name="deportes" id=""> Deportes <br>
+                            <input type="checkbox" name="lectura" id=""> Lectura <br>
+                            <input type="checkbox" name="viajar" id=""> Viajar <br>
+                        </p>
+                        <p>Estado civil: (tag input type radio)</p>
+                        <input type="radio" name="ec" id=""> Casado/a <br> <!--"radio" circulo para solo selecionar 1 opcion-->
+                        <input type="radio" name="ec" id=""> Soltero/a <br>
+                        <input type="radio" name="ec" id=""> Viudo/a <br>
+                        <input type="radio" name="ec" id=""> Otros <br>
+                        </p>
+                        <p>Provincia: (tag select multiple)<br></p>
+                        <select name="provincia" id="" multiple size="5"> <!--selecion multiple de una lista -->
+                            <option value="1">Albacete</option>
+                            <option value="1">Ciudad Real</option>
+                            <option value="3">Cuenca</option>
+                            <option value="1">Guadalajara</option>
+                            <option value="1">Toledo</option>
+                        </select>
+                        <p>Foto: (tag input type file) <input type="file" name="foto" id=""></p><!--type:"file" para mandar archivos-->
+                        <p><input type="submit" value="Enviar" class="btn btn-red"></p> <!--boton para enviar el formulario type subit-->
+                    </fieldset>
+                </form>
+                <div class="cb"></div>
+                <h3 class="text-center">FORMULARIO CON ELEMENTOS HTML5:</h3>
+                <form action="kk.php" method="post" class="form-html5">
+                    <fieldset>
+                        <legend>Inputs HTML5</legend>
+                        <p><label for="">Color:</label> <input type="color" name="color" id=""></p><!-- input type color-->
+                        <p><label for="">Date:</label> <input type="date" name="date" id=""></p><!-- input type date-->
+                        <p><label for="">Datetime:</label> <input type="datetime" name="datetime" id=""></p><!-- "input type datetime" fecha y hora-->
+                        <p><label for="">Datetime-local:</label> <input type="datetime-local" name="datetime-local"
+                                id=""></p>
+                        <p><label for="">Email:</label> <input type="email" name="email" id=""></p><!-- input type email-->
+                        <p><label for="">Month:</label> <input type="month" name="month" id=""></p><!-- input type month-->
+                        <p><label for="">Number:</label> <input type="number" name="number" id="" step="2" min="10"
+                                max="30"></p><!-- input type number--><!--"step" es paso, y se puede selecionar max y min-->
+                        <p><label for="">Range:</label> <input type="range" name="range" id="" step="2" min="10"
+                                max="30"></p> <!-- input type range--><!-- barra deslizable con paso, max y min-->
+                        <p><label for="">Tel:</label> <input type="tel" name="tel" id=""></p><!-- telefono?-->
+                        <p><label for="">Time:</label> <input type="time" name="time" id=""></p><!-- input type time--><!-- time es hora-->
+                        <p><label for="">Url:</label> <input type="url" name="url" id=""></p><!-- input type url-->
+                        <p><label for="">Week:</label> <input type="week" name="week" id=""></p><!-- input type week-->
+                        <p><input type="submit" value="Aceptar" id="" class="btn btn-greem"></p><!-- boton-->
+                    </fieldset>
+                </form>
+
+            </div>
+
+        </main>
+        <footer>
+            <h1 class="bg-azul-o text-center text-white py-3">&copy; Lucas Hernández</h1>
+        </footer>
+    </div>
+    <script>
+        function opendrawer() {
+            document.getElementById('menu').style.display = 'block';
+            document.getElementById('menu').style.witdh = '100%';
+        }
+    </script>
+</body>
+
+</html>
